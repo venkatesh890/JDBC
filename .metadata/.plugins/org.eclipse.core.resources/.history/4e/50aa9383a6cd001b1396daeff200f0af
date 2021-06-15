@@ -1,0 +1,26 @@
+package com.student.manage;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+
+public class StudentDao {
+	public static void insertStudentDB(Student st) {
+		try {
+			//jdbc statement 
+			Connection con=CP.createC();
+			String q="insert into students(sname,sphone,scity) value(?,?,?)";
+			//Prepared Statement
+			PreparedStatement pstmt=con.prepareStatement(q);
+			//set value of parameters
+			pstmt.setString(1, st.getStudentName());
+			pstmt.setString(2, String.getStudentPhone());
+			pstmt.setString(3, String.getStudentCity());
+			
+		} catch (Exception e) {
+			// TODO: handle exception
+			e.printStackTrace();
+		}
+		
+	}
+
+}

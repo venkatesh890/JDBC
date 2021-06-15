@@ -1,0 +1,9 @@
+package com.student.manage;
+
+public class StudentDao {
+	public static void insertStudentDB(StudentDao st) {
+		//jdbc statement 
+		
+	}
+
+}
